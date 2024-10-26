@@ -44,10 +44,15 @@
   height: 50px;
   border-radius: 50%;
   padding: 10px;
-  font-size: large;
+
   color: var(--primary);
   background-color: var(--Dark_Blue);
   border: none;
+}
+.starButtonImage {
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
 }
 
 .ratingButton {
@@ -136,4 +141,40 @@
 }
 
 @media (max-width: 375px) {
+  .starButton {
+    width: 40px;
+    height: 40px;
+  }
+  .page {
+    padding: 20px;
+  }
+  .ratingButtonContainer {
+    width: 300px;
+    margin: -10px;
+  }
+  .ratingButton {
+    width: 40px;
+    height: 40px;
+  }
+  .card {
+    width: 320px;
+    gap: 20px;
+  }
+  .h1 {
+    font-size: 22px;
+  }
+  .paragraph {
+    width: 270px;
+    font-size: small;
+    line-height: 25px;
+  }
+  .submitButton {
+    width: 100%;
+    height: 40px;
+  }
+  .starButtonImage {
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+  }
 }

@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "../page.module.css";
 import RatingButton from "./RatingButton";
-
+import Image from "next/image";
 function CardContent() {
   const searchParams = useSearchParams();
   const [starRating, setStarRating] = useState(0);
@@ -32,13 +32,21 @@ function CardContent() {
 
   return (
     <div className={styles.card}>
-      <button className={styles.starButton}>★</button>
+      <button className={styles.starButton}>
+        <Image
+          src="/images/icon-star.svg"
+          width={12}
+          height={12}
+          alt="star logo"
+          className={styles.starButtonImage}
+        />
+      </button>
       <h1 className={styles.h1}>How did we do?</h1>
       <p className={styles.paragraph}>
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div>
+      <div className={styles.ratingButtonContainer}>
         {Array.from({ length: 5 }).map((_, i) => (
           <RatingButton
             key={i + 1}
