@@ -1,14 +1,15 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: Orange: hsl(25, 97%, 53%);
+
+
+  --background: #171717;
+  --White: hsl(0, 0%, 100%);
+--Light_Grey: hsl(217, 12%, 63%);
+--Dark_Blue: hsl(213, 19%, 18%);
+--Very_Dark_Blue: hsl(216, 12%, 8%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 html,
 body {
@@ -17,9 +18,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+ 
+  background: var(--Very_Dark_Blue);
+  font-family: var(--font-overpass), sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,8 +36,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
