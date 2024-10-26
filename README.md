@@ -5,7 +5,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 ## Table of contents
 
 - [Overview](#Overview)
-- [Getting started](#Getting-started)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Link](#link)
@@ -19,9 +18,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ## Overview
 
-### Getting started
-
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -53,38 +50,23 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
-Some of my major learnings while working through this project are :
+how to structure a better readme
 
-To see how you can add code snippets, see below:
-
+<!--
 ```html
 <h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+``` -->
 
 ### Continued development
 
-I really liked the use of hsl colors and the effect it had in the borders. It would be nice to implement that.
+I really liked the use of hsl colors and the effect it had in the borders. It would be nice to implement that in the future.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [resource 1](https://www.wcag.com/resource/what-is-wcag/) - This helped me for to deepen my knowledge in accesibility
 
 ## Author
 
@@ -92,4 +74,4 @@ I really liked the use of hsl colors and the effect it had in the borders. It wo
 
 ## Acknowledgments
 
--Alejandro Gispert
+- Alejandro Gispert
