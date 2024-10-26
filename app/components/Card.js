@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "../page.module.css";
 import RatingButton from "./RatingButton";
 
-export default function Card() {
-  const router = useRouter();
-  const searchParams = useSearchParams(); // Use this to access query params safely
+function CardContent() {
+  const searchParams = useSearchParams();
   const [starRating, setStarRating] = useState(0);
+  const router = useRouter();
 
   // Fetch initial star rating from URL if available
   useEffect(() => {
@@ -52,5 +52,13 @@ export default function Card() {
         SUBMIT
       </button>
     </div>
+  );
+}
+
+export default function Card() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CardContent />
+    </Suspense>
   );
 }
