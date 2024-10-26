@@ -60,12 +60,16 @@
   color: var(--Light_Grey);
   background-color: var(--Dark_Blue);
   border: none;
+  font-weight: 700;
 }
 .ratingButton:hover {
   background-color: var(--primary);
   color: var(--background);
 }
-
+.ratingButton:active {
+  background-color: var(--White);
+  color: var(--background);
+}
 .submitButton {
   color: var(--Dark_Blue);
   background-color: var(--primary);
