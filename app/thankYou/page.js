@@ -1,8 +1,11 @@
 "use client";
 import styles from "../page.module.css";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+export default function thankYou() {
+  const searchParams = useSearchParams();
+  const value = searchParams.get("value");
 
-export default function thankYou({ stars }) {
   return (
     <div className={styles.thankYouCardContainer}>
       <div className={styles.thanksCard}>
@@ -14,7 +17,7 @@ export default function thankYou({ stars }) {
           className={styles.image}
         />
         <div className={styles.thanksDiv}>
-          <p>You selected 4 out of 5</p>
+          <p>You selected {value} out of 5</p>
         </div>
         <h1 className={styles.h1Thanks}>Thank You!</h1>
         <p className={styles.paragraph}>

@@ -1,15 +1,14 @@
 "use client";
 import styles from "../page.module.css";
 
-export default function RatingButton({ starNumber }) {
-  const handleClick = () => {
-    alert(`Button ${starNumber} clicked!`);
-  };
+export default function RatingButton({ starNumber, isActive, handleClick }) {
   return (
-    <>
-      <button className={styles.ratingButton} onClick={handleClick}>
-        {starNumber}
-      </button>
-    </>
+    <button
+      className={`${styles.ratingButton} ${isActive ? styles.active : ""}`}
+      onClick={handleClick}
+      aria-pressed={isActive}
+    >
+      {starNumber}
+    </button>
   );
 }

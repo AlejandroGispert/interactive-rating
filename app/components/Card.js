@@ -1,11 +1,33 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "../page.module.css";
-import RatingButton from "./RatingButton.js";
+import RatingButton from "./RatingButton";
+
 export default function Card() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted");
+  const router = useRouter();
+  const searchParams = useSearchParams(); // Use this to access query params safely
+  const [starRating, setStarRating] = useState(0);
+
+  // Fetch initial star rating from URL if available
+  useEffect(() => {
+    const value = searchParams.get("value");
+    if (value) {
+      setStarRating(Number(value)); // Convert value to number if it exists
+    }
+  }, [searchParams]);
+
+  const handleSubmit = () => {
+    if (starRating === 0) {
+      alert("Please select a rating");
+      return;
+    }
+    router.push(`/thankYou?value=${starRating}`);
+  };
+
+  const handleRating = (rating) => {
+    setStarRating(rating);
   };
 
   return (
@@ -18,7 +40,12 @@ export default function Card() {
       </p>
       <div>
         {Array.from({ length: 5 }).map((_, i) => (
-          <RatingButton key={i + 1} starNumber={i + 1} />
+          <RatingButton
+            key={i + 1}
+            starNumber={i + 1}
+            isActive={starRating === i + 1}
+            handleClick={() => handleRating(i + 1)}
+          />
         ))}
       </div>
       <button className={styles.submitButton} onClick={handleSubmit}>

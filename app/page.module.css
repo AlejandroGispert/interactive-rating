@@ -69,6 +69,11 @@
   background-color: var(--White);
   color: var(--background);
 }
+.active {
+  background-color: var(--White);
+  color: var(--background);
+}
+
 .submitButton {
   color: var(--Dark_Blue);
   background-color: var(--primary);
