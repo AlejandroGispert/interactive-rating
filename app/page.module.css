@@ -15,7 +15,6 @@
   min-height: 100svh;
   padding: 80px;
   gap: 64px;
-  font-family: var(--font-geist-sans);
 }
 
 .main {
@@ -88,6 +87,46 @@
   color: var(--Light_Grey);
 }
 
+.thankYouCardContainer {
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: 80px;
+  gap: 64px;
+  text-align: center;
+}
+.thanksDiv {
+  color: var(--primary);
+  background-color: var(--Dark_Blue);
+  border-radius: 20px;
+  padding: 5px;
+  width: 210px;
+  margin: 0 auto;
+
+  align-items: center;
+  font-size: 15px;
+}
+.thanksCard {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-row-start: 2;
+  background-color: var(--inBetween);
+  color: var(--White);
+  border-radius: 7%;
+  padding: 25px;
+}
+.image {
+  margin: 0 auto;
+}
+.h1Thanks {
+  margin-top: 15px;
+  margin-bottom: -20px;
+  padding-bottom: 0;
+}
 @media (max-width: 1440px) {
 }
 

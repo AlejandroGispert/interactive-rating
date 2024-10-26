@@ -1,15 +1,13 @@
 :root {
-  --primary: Orange: hsl(25, 97%, 53%);
-
+  --primary: hsl(25, 97%, 53%);
 
   --background: #171717;
   --White: hsl(0, 0%, 100%);
---Light_Grey: hsl(217, 12%, 63%);
---Dark_Blue: hsl(213, 19%, 18%);
---Very_Dark_Blue: hsl(216, 12%, 8%);
+  --Light_Grey: hsl(217, 12%, 63%);
+  --Dark_Blue: hsl(213, 19%, 18%);
+  --inBetween: hsl(221, 22%, 15%);
+  --Very_Dark_Blue: hsl(216, 12%, 8%);
 }
-
-
 
 html,
 body {
@@ -18,9 +16,8 @@ body {
 }
 
 body {
- 
   background: var(--Very_Dark_Blue);
-  font-family: var(--font-overpass), sans-serif; 
+  font-family: var(--font-overpass), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,4 +32,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
